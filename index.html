@@ -930,7 +930,7 @@
                 // MOBILE OVERRIDE
                 if(isMobile) {
                     direction.x = joystickData.x; // Left/Right
-                    direction.z = -joystickData.y; // Forward/Back (joystick Y is up/down, inverted for screen)
+                    direction.z = joystickData.y; // Forward/Back (Corrected: Up is negative Y, which makes direction negative, increasing velocity, moving forward)
                 } else {
                     direction.normalize(); // Only needed for keyboard discrete values
                 }
